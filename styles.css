@@ -1,16 +1,21 @@
 :root {
-  --blue: #000091;
-  --blue-hover: #1212ff;
-  --blue-active: #000071;
-  --red: #e1000f;
+  /* Couleurs du drapeau RCA */
+  --blue: #003082;
+  --blue-hover: #0044b3;
+  --blue-active: #00205a;
+  --white: #ffffff;
+  --green: #289728;
+  --green-deep: #1e7a1e;
+  --yellow: #ffce00;
+  --red: #d21034;
   --ink: #161616;
   --muted: #666666;
   --border: #dddddd;
   --bg: #ffffff;
   --bg-alt: #f6f6f6;
-  --success: #18753c;
-  --warning: #716043;
-  --info: #0063cb;
+  --success: var(--green-deep);
+  --warning: #8a6d00;
+  --info: var(--blue);
   --font: "Source Sans 3", "Segoe UI", sans-serif;
   --max: 56rem;
 }
@@ -38,24 +43,33 @@ a:hover {
   color: var(--blue-hover);
 }
 
-.rf-banner {
+.flag-banner {
   display: flex;
-  height: 0.4rem;
+  height: 0.45rem;
 }
 
-.rf-stripe {
+.flag-stripe {
   flex: 1;
 }
 
-.rf-stripe.blue {
+.flag-stripe.blue {
   background: var(--blue);
 }
 
-.rf-stripe.white {
-  background: #fff;
+.flag-stripe.white {
+  background: var(--white);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.06);
 }
 
-.rf-stripe.red {
+.flag-stripe.green {
+  background: var(--green);
+}
+
+.flag-stripe.yellow {
+  background: var(--yellow);
+}
+
+.flag-stripe.red {
   background: var(--red);
 }
 
@@ -192,16 +206,18 @@ a:hover {
   letter-spacing: 0.04em;
 }
 
+.app-status.pending {
+  color: var(--warning);
+  background: color-mix(in srgb, var(--yellow) 28%, transparent);
+  padding: 0.1rem 0.4rem;
+}
+
 .app-status.live {
   color: var(--success);
 }
 
-.app-status.pending {
-  color: var(--warning);
-}
-
 .app-status.internal {
-  color: var(--info);
+  color: var(--red);
 }
 
 .app-row h2 {
@@ -236,7 +252,7 @@ a:hover {
   padding: 0.45rem 1.1rem;
   border: 1px solid var(--blue);
   background: var(--blue);
-  color: #fff;
+  color: var(--white);
   font-weight: 600;
   font-size: 0.95rem;
   text-decoration: none;
@@ -244,9 +260,9 @@ a:hover {
 }
 
 .app-action:hover {
-  background: var(--blue-hover);
-  border-color: var(--blue-hover);
-  color: #fff;
+  background: var(--green-deep);
+  border-color: var(--green-deep);
+  color: var(--white);
 }
 
 .app-action:active {
