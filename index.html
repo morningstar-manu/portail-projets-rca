@@ -7,235 +7,284 @@
       name="description"
       content="Portail des applications métier déployées pour les institutions de la République Centrafricaine."
     />
-    <title>Portail Projets RCA</title>
+    <title>Portail des applications — RCA</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div class="bg-grid" aria-hidden="true"></div>
-    <div class="bg-glow" aria-hidden="true"></div>
+    <div class="rf-banner" aria-hidden="true">
+      <span class="rf-stripe blue"></span>
+      <span class="rf-stripe white"></span>
+      <span class="rf-stripe red"></span>
+    </div>
 
     <header class="site-header">
-      <div class="brand">
-        <span class="brand-mark" aria-hidden="true"></span>
-        <div>
-          <p class="brand-name">Portail Projets RCA</p>
-          <p class="brand-tag">Applications institutionnelles · Production</p>
+      <div class="header-inner">
+        <div class="brand">
+          <p class="brand-entity">République Centrafricaine</p>
+          <p class="brand-name">Portail des applications</p>
         </div>
+        <p class="header-aside">Environnement de production</p>
       </div>
-      <nav class="header-nav" aria-label="Filtres">
+    </header>
+
+    <main class="page">
+      <section class="intro">
+        <h1>Accéder aux applications</h1>
+        <p>
+          Ce portail regroupe les applications institutionnelles déployées en
+          production. Sélectionnez un service pour ouvrir l’interface
+          correspondante.
+        </p>
+      </section>
+
+      <nav class="filters" aria-label="Filtrer par domaine">
         <button type="button" class="filter is-active" data-filter="all">Tous</button>
         <button type="button" class="filter" data-filter="securite">Sécurité</button>
         <button type="button" class="filter" data-filter="gouvernance">Gouvernance</button>
         <button type="button" class="filter" data-filter="service">Services</button>
       </nav>
-    </header>
 
-    <main>
-      <section class="hero">
-        <p class="hero-kicker">République Centrafricaine</p>
-        <h1>Portail Projets <em>RCA</em></h1>
-        <p class="hero-lead">
-          Accès centralisé aux applications de production déployées pour la
-          police, la présidence et les services de l’État.
-        </p>
-        <div class="hero-meta">
-          <span id="live-count">7 en ligne</span>
-          <span>Mise à jour août 2026</span>
-        </div>
-      </section>
-
-      <section class="catalog" aria-label="Catalogue des applications">
-        <article class="app-card" data-category="securite" style="--i: 0">
-          <div class="app-top">
-            <span class="app-badge live">En ligne</span>
-            <span class="app-cat">Sécurité</span>
+      <section class="catalog" aria-label="Liste des applications">
+        <article class="app-row" data-category="securite">
+          <div class="app-main">
+            <div class="app-meta">
+              <span class="app-cat">Sécurité</span>
+              <span class="app-status live">En ligne</span>
+            </div>
+            <h2>
+              <a href="https://sigat-abonnes2.vercel.app" target="_blank" rel="noopener noreferrer"
+                >SIGAT</a
+              >
+            </h2>
+            <p>
+              Système intégré de gestion des abonnés télécoms pour la Police
+              Nationale — recherche, réquisitions, signalements et surveillance.
+            </p>
           </div>
-          <h2>SIGAT</h2>
-          <p>
-            Système intégré de gestion des abonnés télécoms pour la Police
-            Nationale — recherche, réquisitions, signalements et surveillance.
-          </p>
           <a
-            class="app-link"
+            class="app-action"
             href="https://sigat-abonnes2.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
+            >Accéder</a
           >
-            Ouvrir l’application
-            <span aria-hidden="true">↗</span>
-          </a>
         </article>
 
-        <article class="app-card" data-category="gouvernance" style="--i: 1">
-          <div class="app-top">
-            <span class="app-badge live">En ligne</span>
-            <span class="app-cat">Gouvernance</span>
+        <article class="app-row" data-category="gouvernance">
+          <div class="app-main">
+            <div class="app-meta">
+              <span class="app-cat">Gouvernance</span>
+              <span class="app-status live">En ligne</span>
+            </div>
+            <h2>
+              <a href="https://ddr-rca.vercel.app" target="_blank" rel="noopener noreferrer"
+                >PNDDRR — Suivi DDR</a
+              >
+            </h2>
+            <p>
+              Suivi du programme national de désarmement, démobilisation,
+              réintégration et rapatriement — combattants, armes et cartographie.
+            </p>
           </div>
-          <h2>PNDDRR · DDR</h2>
-          <p>
-            Suivi du programme national de désarmement, démobilisation,
-            réintégration et rapatriement — combattants, armes et cartographie.
-          </p>
           <a
-            class="app-link"
+            class="app-action"
             href="https://ddr-rca.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
+            >Accéder</a
           >
-            Ouvrir l’application
-            <span aria-hidden="true">↗</span>
-          </a>
         </article>
 
-        <article class="app-card" data-category="securite" style="--i: 2">
-          <div class="app-top">
-            <span class="app-badge live">En ligne</span>
-            <span class="app-cat">Sécurité</span>
+        <article class="app-row" data-category="securite">
+          <div class="app-main">
+            <div class="app-meta">
+              <span class="app-cat">Sécurité</span>
+              <span class="app-status live">En ligne</span>
+            </div>
+            <h2>
+              <a
+                href="https://sigpaf-police-frontieres.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                >SIGPAF</a
+              >
+            </h2>
+            <p>
+              Système intégré de gestion de la Police aux Frontières — contrôles
+              d’entrée et de sortie, registre frontalier.
+            </p>
           </div>
-          <h2>SIGPAF</h2>
-          <p>
-            Système intégré de gestion de la Police aux Frontières — contrôles
-            d’entrée/sortie et registre frontalier.
-          </p>
           <a
-            class="app-link"
+            class="app-action"
             href="https://sigpaf-police-frontieres.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
+            >Accéder</a
           >
-            Ouvrir l’application
-            <span aria-hidden="true">↗</span>
-          </a>
         </article>
 
-        <article class="app-card" data-category="gouvernance" style="--i: 3">
-          <div class="app-top">
-            <span class="app-badge live">En ligne</span>
-            <span class="app-cat">Gouvernance</span>
+        <article class="app-row" data-category="gouvernance">
+          <div class="app-main">
+            <div class="app-meta">
+              <span class="app-cat">Gouvernance</span>
+              <span class="app-status live">En ligne</span>
+            </div>
+            <h2>
+              <a href="https://www.gestipers.org" target="_blank" rel="noopener noreferrer"
+                >GestiPers</a
+              >
+            </h2>
+            <p>
+              Gestion du personnel de la Présidence — agents, missions, congés,
+              cartes professionnelles et demandes d’audience.
+            </p>
           </div>
-          <h2>GestiPers</h2>
-          <p>
-            Gestion du personnel de la Présidence — agents, missions, congés,
-            cartes professionnelles et demandes d’audience.
-          </p>
           <a
-            class="app-link"
+            class="app-action"
             href="https://www.gestipers.org"
             target="_blank"
             rel="noopener noreferrer"
+            >Accéder</a
           >
-            Ouvrir l’application
-            <span aria-hidden="true">↗</span>
-          </a>
         </article>
 
-        <article class="app-card" data-category="gouvernance" style="--i: 4">
-          <div class="app-top">
-            <span class="app-badge live">En ligne</span>
-            <span class="app-cat">Gouvernance</span>
+        <article class="app-row" data-category="gouvernance">
+          <div class="app-main">
+            <div class="app-meta">
+              <span class="app-cat">Gouvernance</span>
+              <span class="app-status live">En ligne</span>
+            </div>
+            <h2>
+              <a href="https://sgg-rca.vercel.app" target="_blank" rel="noopener noreferrer"
+                >SGG-RCA</a
+              >
+            </h2>
+            <p>
+              Secrétariat Général du Gouvernement — ministres, actes
+              administratifs, missions et suivi financier.
+            </p>
           </div>
-          <h2>SGG-RCA</h2>
-          <p>
-            Secrétariat Général du Gouvernement — ministres, actes
-            administratifs, missions et suivi financier.
-          </p>
           <a
-            class="app-link"
+            class="app-action"
             href="https://sgg-rca.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
+            >Accéder</a
           >
-            Ouvrir l’application
-            <span aria-hidden="true">↗</span>
-          </a>
         </article>
 
-        <article class="app-card" data-category="securite" style="--i: 5">
-          <div class="app-top">
-            <span class="app-badge live">En ligne</span>
-            <span class="app-cat">Sécurité</span>
+        <article class="app-row" data-category="securite">
+          <div class="app-main">
+            <div class="app-meta">
+              <span class="app-cat">Sécurité</span>
+              <span class="app-status live">En ligne</span>
+            </div>
+            <h2>
+              <a
+                href="https://gestion-hotel-service.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Contrôle hôtelier</a
+              >
+            </h2>
+            <p>
+              Registre national des entrées et sorties hôtelières — déclaration
+              des établissements et recherche nationale pour la Police.
+            </p>
           </div>
-          <h2>Contrôle Hôtelier</h2>
-          <p>
-            Registre national des entrées et sorties hôtelières — déclaration
-            des établissements et recherche nationale pour la Police.
-          </p>
           <a
-            class="app-link"
+            class="app-action"
             href="https://gestion-hotel-service.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
+            >Accéder</a
           >
-            Ouvrir l’application
-            <span aria-hidden="true">↗</span>
-          </a>
         </article>
 
-        <article class="app-card" data-category="service" style="--i: 6">
-          <div class="app-top">
-            <span class="app-badge live">En ligne</span>
-            <span class="app-cat">Services</span>
+        <article class="app-row" data-category="service">
+          <div class="app-main">
+            <div class="app-meta">
+              <span class="app-cat">Services</span>
+              <span class="app-status live">En ligne</span>
+            </div>
+            <h2>
+              <a
+                href="https://gestion-autorisation-survol.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Autorisations de survol</a
+              >
+            </h2>
+            <p>
+              Registre des autorisations de survol FIR Bangui — dossiers,
+              utilisateurs et journal d’activité (FR / EN / RU).
+            </p>
           </div>
-          <h2>Autorisations de survol</h2>
-          <p>
-            Registre des autorisations de survol FIR Bangui — dossiers,
-            utilisateurs et journal d’activité (interface FR / EN / RU).
-          </p>
           <a
-            class="app-link"
+            class="app-action"
             href="https://gestion-autorisation-survol.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
+            >Accéder</a
           >
-            Ouvrir l’application
-            <span aria-hidden="true">↗</span>
-          </a>
         </article>
 
-        <article class="app-card is-muted" data-category="securite" style="--i: 7">
-          <div class="app-top">
-            <span class="app-badge pending">Hors ligne</span>
-            <span class="app-cat">Sécurité</span>
+        <article class="app-row is-muted" data-category="securite">
+          <div class="app-main">
+            <div class="app-meta">
+              <span class="app-cat">Sécurité</span>
+              <span class="app-status pending">Hors ligne</span>
+            </div>
+            <h2>Agents Sécurité</h2>
+            <p>
+              Suivi des agents de sécurité — rapports journaliers, photos, GPS
+              en direct et messagerie. Déploiement de production à finaliser.
+            </p>
           </div>
-          <h2>Agents Sécurité</h2>
-          <p>
-            Suivi des agents de sécurité — rapports journaliers, photos, GPS
-            en direct et messagerie (déploiement Render à configurer).
-          </p>
-          <span class="app-link is-disabled">URL de production à venir</span>
+          <span class="app-action is-disabled">Indisponible</span>
         </article>
 
-        <article class="app-card is-muted" data-category="service" style="--i: 8">
-          <div class="app-top">
-            <span class="app-badge internal">Interne</span>
-            <span class="app-cat">Services</span>
+        <article class="app-row is-muted" data-category="service">
+          <div class="app-main">
+            <div class="app-meta">
+              <span class="app-cat">Services</span>
+              <span class="app-status internal">Accès interne</span>
+            </div>
+            <h2>
+              <a
+                href="https://github.com/morningstar-manu/mcp_identite"
+                target="_blank"
+                rel="noopener noreferrer"
+                >ARIA-ID — MCP Identité</a
+              >
+            </h2>
+            <p>
+              Serveur MCP d’interconnexion des bases d’identité RCA (ONCA, État
+              civil, DGEF, SIPD) — réseau institutionnel uniquement.
+            </p>
           </div>
-          <h2>ARIA-ID · MCP Identité</h2>
-          <p>
-            Serveur MCP d’interconnexion des bases d’identité RCA (ONCA, État
-            civil, DGEF, SIPD) — accès réseau institutionnel uniquement.
-          </p>
           <a
-            class="app-link"
+            class="app-action"
             href="https://github.com/morningstar-manu/mcp_identite"
             target="_blank"
             rel="noopener noreferrer"
+            >Dépôt</a
           >
-            Voir le dépôt
-            <span aria-hidden="true">↗</span>
-          </a>
         </article>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>Portail Projets RCA · Accès interne aux environnements de production</p>
+      <div class="footer-inner">
+        <p>Portail des applications — République Centrafricaine</p>
+        <p>Usage réservé aux agents habilités · Mise à jour août 2026</p>
+      </div>
     </footer>
 
     <script src="./app.js"></script>

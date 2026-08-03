@@ -1,5 +1,5 @@
 const filters = document.querySelectorAll(".filter");
-const cards = document.querySelectorAll(".app-card");
+const rows = document.querySelectorAll(".app-row");
 
 filters.forEach((button) => {
   button.addEventListener("click", () => {
@@ -7,9 +7,9 @@ filters.forEach((button) => {
 
     filters.forEach((item) => item.classList.toggle("is-active", item === button));
 
-    cards.forEach((card) => {
-      const match = value === "all" || card.dataset.category === value;
-      card.classList.toggle("is-hidden", !match);
+    rows.forEach((row) => {
+      const match = value === "all" || row.dataset.category === value;
+      row.classList.toggle("is-hidden", !match);
     });
   });
 });
